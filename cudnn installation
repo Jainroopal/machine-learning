@@ -1,3 +1,4 @@
+check the cuda version by this cmd $ dpkg -l | grep cuda-toolkit
 Install Cudnn according to your Cuda version from https://developer.nvidia.com/rdp/cudnn-archive.
 
 UNZIP the tar file using cmd $ tar -xzvf cudnn-x.x-linux-x64-v8.x.x.x.tgz
