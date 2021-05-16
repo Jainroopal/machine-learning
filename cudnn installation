@@ -1,0 +1,19 @@
+Install Cudnn according to your Cuda version from https://developer.nvidia.com/rdp/cudnn-archive.
+
+UNZIP the tar file using cmd $ tar -xzvf cudnn-x.x-linux-x64-v8.x.x.x.tgz
+
+Copy the following files into the CUDA Toolkit directory.
+$ sudo cp cuda/include/cudnn*.h /usr/local/cuda/include 
+$ sudo cp -P cuda/lib64/libcudnn* /usr/local/cuda/lib64 
+
+Finally: add read permission to both these target directory
+$ sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
+
+
+Once you finish, you have to add the CUDA path to your ~/.bashrc file. Open
+
+$ echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc
+$ echo 'export LD_LIBRARY_PATH=/usr/local/cuda/include:$LD_LIBRARY_PATH' >> ~/.bashrc
+
+Then reload .bashrc by running:
+source ~/.bashrc
